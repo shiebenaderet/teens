@@ -1,0 +1,20 @@
+# Source material — keep local, don't publish
+books/
+excerpts/
+
+# Portable builds.
+# - talking-with-teens.html is the local-use build that references media/ — keep out of the repo.
+# - talking-with-teens-shareable.html is the publish-safe build (iframes only, no local-media references) — commit this one.
+portable/*
+!portable/talking-with-teens-shareable.html
+
+# Downloaded podcast audio and video files — personal use only, never publish
+media/
+
+# macOS
+.DS_Store
+
+# Editor cruft
+.vscode/
+*.swp
+*~
