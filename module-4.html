@@ -8,6 +8,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://teens.mrbsocialstudies.org/module-4.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Talking with Teens">
+<meta property="og:title" content="Module IV: Friendship and Belonging — Talking with Teens">
+<meta property="og:description" content="Module IV of the Talking with Teens reader. How to matter to a kid whose world is their friends. Built on the Chunk-Chew-Check model.">
+<meta property="og:url" content="https://teens.mrbsocialstudies.org/module-4.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Module IV: Friendship and Belonging — Talking with Teens">
+<meta name="twitter:description" content="Module IV of the Talking with Teens reader. How to matter to a kid whose world is their friends. Built on the Chunk-Chew-Check model.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,6 +31,10 @@
       <a href="library.html">Library</a>
       <a href="index.html#about">About</a>
     </nav>
+    <div class="role-toggle masthead-role" role="tablist" aria-label="Read as parent or teacher">
+      <button type="button" class="role-pill active" data-role="parent" role="tab" aria-selected="true">Parents</button>
+      <button type="button" class="role-pill" data-role="teacher" role="tab" aria-selected="false">Teachers</button>
+    </div>
   </div>
 </header>
 
@@ -36,10 +50,10 @@
 </div>
 
 <div class="module-meta-bar">
-  <span>Reading <strong>~90 min</strong></span>
-  <span>Listening <strong>~80 min</strong></span>
+  <span>Reading <strong>~75 min</strong></span>
+  <span>Listening <strong>~50 min</strong></span>
   <span>Check tasks <strong>~25 min</strong></span>
-  <span>Total <strong>~3.25 hours</strong></span>
+  <span>Total <strong>~2.5 hours</strong></span>
 </div>
 
 <section class="module-body">
@@ -84,7 +98,8 @@
       <div class="ccc-phase ccc-check">
         <div class="ccc-label">Check</div>
         <div class="ccc-content">
-          <p>Write one sentence describing the difference between peer attachment and peer orientation, in language you'd use with a colleague who hadn't read the book. Test it on the next teacher you talk to. If they understood your sentence, the sentence works.</p>
+          <p data-audience="teacher">Write one sentence describing the difference between peer attachment and peer orientation, in language you'd use with a colleague who hadn't read the book. Test it on the next teacher you talk to. If they understood your sentence, the sentence works.</p>
+          <p data-audience="parent">Write one sentence describing the difference between peer attachment and peer orientation, in language you'd use with another parent who hadn't read the book. Test it on the next adult you talk to. If they understood your sentence, the sentence works.</p>
         </div>
       </div>
 
@@ -204,6 +219,10 @@
 
   <p>Module V picks up the thread when the relationship goes through real friction. Not the slow drift of this module, but the moment a rule gets broken and you have to decide what to do.</p>
 
+  <div class="module-progress">
+    <button type="button" class="mark-done" data-module="module-4" aria-pressed="false">Mark Module IV as done</button>
+  </div>
+
   <!-- NEXT UP -->
   <div class="next-up">
     <a href="module-3.html">
@@ -228,5 +247,6 @@
   <p style="margin-top:1rem; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">Set in Playfair Display &amp; Nunito</p>
 </footer>
 
+<script src="site.js"></script>
 </body>
 </html>

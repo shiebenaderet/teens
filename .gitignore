@@ -2,11 +2,9 @@
 books/
 excerpts/
 
-# Portable builds.
-# - talking-with-teens.html is the local-use build that references media/ — keep out of the repo.
-# - talking-with-teens-shareable.html is the publish-safe build (iframes only, no local-media references) — commit this one.
-portable/*
-!portable/talking-with-teens-shareable.html
+# Portable builds embed copyrighted chapter excerpts. Generate locally;
+# do not commit or deploy them.
+portable/
 
 # Downloaded podcast audio and video files — personal use only, never publish
 media/

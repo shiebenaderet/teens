@@ -8,6 +8,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://teens.mrbsocialstudies.org/module-5.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Talking with Teens">
+<meta property="og:title" content="Module V: Conflict, Limits, and Repair — Talking with Teens">
+<meta property="og:description" content="Module V of the Talking with Teens reader. How to hold a line without breaking the relationship. Built on the Chunk-Chew-Check model.">
+<meta property="og:url" content="https://teens.mrbsocialstudies.org/module-5.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Module V: Conflict, Limits, and Repair — Talking with Teens">
+<meta name="twitter:description" content="Module V of the Talking with Teens reader. How to hold a line without breaking the relationship. Built on the Chunk-Chew-Check model.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,6 +31,10 @@
       <a href="library.html">Library</a>
       <a href="index.html#about">About</a>
     </nav>
+    <div class="role-toggle masthead-role" role="tablist" aria-label="Read as parent or teacher">
+      <button type="button" class="role-pill active" data-role="parent" role="tab" aria-selected="true">Parents</button>
+      <button type="button" class="role-pill" data-role="teacher" role="tab" aria-selected="false">Teachers</button>
+    </div>
   </div>
 </header>
 
@@ -37,9 +51,9 @@
 
 <div class="module-meta-bar">
   <span>Reading <strong>~80 min</strong></span>
-  <span>Listening <strong>~95 min</strong></span>
+  <span>Listening <strong>~50 min</strong></span>
   <span>Check tasks <strong>~25 min</strong></span>
-  <span>Total <strong>~3.25 hours</strong></span>
+  <span>Total <strong>~2.5 hours</strong></span>
 </div>
 
 <section class="module-body">
@@ -84,7 +98,8 @@
       <div class="ccc-phase ccc-check">
         <div class="ccc-label">Check</div>
         <div class="ccc-content">
-          <p>Write a single sentence you could say in the heat of the moment instead of "go to your room" or "I'm taking your phone." Make it under ten words. Make it useful. Put it on a sticky note where you'll see it.</p>
+          <p data-audience="parent">Write a single sentence you could say in the heat of the moment instead of "go to your room" or "I'm taking your phone." Make it under ten words. Make it useful. Put it on a sticky note where you'll see it.</p>
+          <p data-audience="teacher">Write a single sentence you could say in the heat of the moment instead of sending them out or writing the referral. Make it under ten words. Make it useful. Put it on a sticky note where you'll see it.</p>
         </div>
       </div>
 
@@ -204,6 +219,10 @@
 
   <p>Module VI takes the last step. Every module before this one has been the adult literature on teens. The last module flips that and listens to the only people who actually know what it's like to be in your classroom.</p>
 
+  <div class="module-progress">
+    <button type="button" class="mark-done" data-module="module-5" aria-pressed="false">Mark Module V as done</button>
+  </div>
+
   <!-- NEXT UP -->
   <div class="next-up">
     <a href="module-4.html">
@@ -228,5 +247,6 @@
   <p style="margin-top:1rem; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">Set in Playfair Display &amp; Nunito</p>
 </footer>
 
+<script src="site.js"></script>
 </body>
 </html>

@@ -8,6 +8,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://teens.mrbsocialstudies.org/library.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Talking with Teens">
+<meta property="og:title" content="The Library — Talking with Teens">
+<meta property="og:description" content="Seven books paired with verified video and podcast companions for each.">
+<meta property="og:url" content="https://teens.mrbsocialstudies.org/library.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Library — Talking with Teens">
+<meta name="twitter:description" content="Seven books paired with verified video and podcast companions for each.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,6 +31,10 @@
       <a href="library.html" class="current">Library</a>
       <a href="index.html#about">About</a>
     </nav>
+    <div class="role-toggle masthead-role" role="tablist" aria-label="Read as parent or teacher">
+      <button type="button" class="role-pill active" data-role="parent" role="tab" aria-selected="true">Parents</button>
+      <button type="button" class="role-pill" data-role="teacher" role="tab" aria-selected="false">Teachers</button>
+    </div>
   </div>
 </header>
 
@@ -274,10 +288,9 @@
       <div class="cheat-section saying">
         <div class="cheat-label">Try saying</div>
         <ul class="cheat-list-items">
-          <li>Start talking. Take any discomfort you feel and multiply by 100, then talk anyway.</li>
-          <li>Listen. When he's ready, listen more than you advise.</li>
-          <li>Don't make eye contact. Talk while driving, while walking, while doing dishes.</li>
-          <li>Turn off the phones. Yours and his.</li>
+          <li>Want to come along for the ride?</li>
+          <li>I'm around if you want to talk. No pressure.</li>
+          <li>I was thinking about what you said yesterday.</li>
         </ul>
       </div>
       <div class="cheat-section practice">
@@ -285,7 +298,8 @@
         <ul class="cheat-list-items">
           <li>Use the car. Side-by-side beats face-to-face for boys.</li>
           <li>Assume puberty has started, even if he still looks like a kid.</li>
-          <li>Don't lecture. Ask, listen, then keep coming back.</li>
+          <li>Talk anyway, even when it feels awkward. Then listen more than you advise.</li>
+          <li>Phones off. Yours and his. Skip the eye contact.</li>
           <li>Read Chapter 1 and treat its ten rules as a list to memorize.</li>
         </ul>
       </div>
@@ -322,10 +336,10 @@
       <div class="cheat-section saying">
         <div class="cheat-label">Try saying</div>
         <ul class="cheat-list-items">
-          <li>An ideal teacher understands and pays attention to the kid.</li>
-          <li>Don't single one of us out.</li>
-          <li>Tell us why it matters.</li>
-          <li>Make it hard, and show us how to do it.</li>
+          <li>I see you. I'm paying attention.</li>
+          <li>I'm not going to put you on the spot in front of everyone.</li>
+          <li>Here's why this matters.</li>
+          <li>This is going to be hard, and I'll show you how.</li>
         </ul>
       </div>
       <div class="cheat-section practice">
@@ -461,5 +475,6 @@
   });
 })();
 </script>
+<script src="site.js"></script>
 </body>
 </html>

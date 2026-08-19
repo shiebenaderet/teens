@@ -8,6 +8,12 @@ Reads the site source files (index.html, library.html, module-N.html, style.css)
 and the chapter excerpts under excerpts/module-N/, then assembles them into one
 self-contained HTML file at portable/talking-with-teens.html.
 
+Writes two local files under portable/ (both gitignored — they embed
+copyrighted chapter excerpts and must not go on the public site):
+
+  portable/talking-with-teens.html            local-use; native players when media/ exists
+  portable/talking-with-teens-shareable.html  iframe embeds only; still excerpted; noindex
+
 The resulting file:
   - Inlines all CSS, no external stylesheet needed
   - Embeds chapter excerpts INLINE inside each step (visible by default)
@@ -455,6 +461,7 @@ def extract_body(html):
     body = m.group(1) if m else html
     body = re.sub(r"<header class=\"masthead\">.*?</header>\s*", "", body, count=1, flags=re.S)
     body = re.sub(r"<footer>.*?</footer>\s*", "", body, count=1, flags=re.S)
+    body = re.sub(r'<script src="site\.js"></script>\s*', "", body)
     return body.strip()
 
 
@@ -705,8 +712,8 @@ def build(*, suppress_local_media=False, out_filename="talking-with-teens.html",
         injected wherever a matching file exists in media/. This is the
         local-use build.
     suppress_local_media=True: all embeds stay as iframes regardless of what's
-        in media/. Used for the shareable build (committed to the repo, served
-        from GitHub Pages, where the media/ folder doesn't exist).
+        in media/. Used for the shareable colleague build. Still embeds
+        excerpted chapter text — generate locally, do not deploy.
     """
     global _SUPPRESS_LOCAL_MEDIA
     _SUPPRESS_LOCAL_MEDIA = suppress_local_media
@@ -766,6 +773,10 @@ def build(*, suppress_local_media=False, out_filename="talking-with-teens.html",
       <a href="#library" data-page="library">Library</a>
       <a href="#home" data-page="home" data-scroll="about">About</a>
     </nav>
+    <div class="role-toggle masthead-role" role="tablist" aria-label="Read as parent or teacher">
+      <button type="button" class="role-pill active" data-role="parent" role="tab" aria-selected="true">Parents</button>
+      <button type="button" class="role-pill" data-role="teacher" role="tab" aria-selected="false">Teachers</button>
+    </div>
   </div>
 </header>
 
@@ -845,6 +856,9 @@ def build(*, suppress_local_media=False, out_filename="talking-with-teens.html",
 </html>
 """
 
+    site_js = read_text(ROOT / "site.js")
+    html = html.replace("</body>", f"<script>\n{site_js}\n</script>\n</body>", 1)
+
     out_path = OUT.parent / out_filename
     out_path.parent.mkdir(exist_ok=True)
     out_path.write_text(html, encoding="utf-8")
@@ -860,7 +874,7 @@ def main():
         out_filename="talking-with-teens.html",
         noindex=False,
     )
-    print("\nShareable build (iframes only, no local-media references, noindex):")
+    print("\nShareable build (iframes only, excerpted, gitignored, noindex):")
     build(
         suppress_local_media=True,
         out_filename="talking-with-teens-shareable.html",

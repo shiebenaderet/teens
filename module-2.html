@@ -8,6 +8,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://teens.mrbsocialstudies.org/module-2.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Talking with Teens">
+<meta property="og:title" content="Module II: Listening Before Talking — Talking with Teens">
+<meta property="og:description" content="Module II of the Talking with Teens reader. What to say in the first thirty seconds of a hard conversation. Built on the Chunk-Chew-Check model.">
+<meta property="og:url" content="https://teens.mrbsocialstudies.org/module-2.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Module II: Listening Before Talking — Talking with Teens">
+<meta name="twitter:description" content="Module II of the Talking with Teens reader. What to say in the first thirty seconds of a hard conversation. Built on the Chunk-Chew-Check model.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,6 +31,10 @@
       <a href="library.html">Library</a>
       <a href="index.html#about">About</a>
     </nav>
+    <div class="role-toggle masthead-role" role="tablist" aria-label="Read as parent or teacher">
+      <button type="button" class="role-pill active" data-role="parent" role="tab" aria-selected="true">Parents</button>
+      <button type="button" class="role-pill" data-role="teacher" role="tab" aria-selected="false">Teachers</button>
+    </div>
   </div>
 </header>
 
@@ -37,9 +51,9 @@
 
 <div class="module-meta-bar">
   <span>Reading <strong>~70 min</strong></span>
-  <span>Listening <strong>~75 min</strong></span>
+  <span>Listening <strong>~30 min</strong></span>
   <span>Check tasks <strong>~25 min</strong></span>
-  <span>Total <strong>~2.5 hours</strong></span>
+  <span>Total <strong>~2 hours</strong></span>
 </div>
 
 <section class="module-body">
@@ -156,7 +170,8 @@
       <div class="ccc-phase ccc-check">
         <div class="ccc-label">Check</div>
         <div class="ccc-content">
-          <p>Draft three short sentences you could actually say in the first thirty seconds of these three situations: (a) a student in tears at your door before first period, (b) a student stonewalling at their desk after a quiz, (c) a student blowing up at a peer in the hallway. Each sentence should be one line. None of them should solve the problem. All of them should pass the test of "would I believe this if it were said to me?"</p>
+          <p data-audience="teacher">Draft three short sentences you could actually say in the first thirty seconds of these three situations: (a) a student in tears at your door before first period, (b) a student stonewalling at their desk after a quiz, (c) a student blowing up at a peer in the hallway. Each sentence should be one line. None of them should solve the problem. All of them should pass the test of "would I believe this if it were said to me?"</p>
+          <p data-audience="parent">Draft three short sentences you could actually say in the first thirty seconds of these three situations: (a) they walk in the door already in tears, (b) they stonewall at the dinner table, (c) they blow up at a sibling in the hallway. Each sentence should be one line. None of them should solve the problem. All of them should pass the test of "would I believe this if it were said to me?"</p>
         </div>
       </div>
 
@@ -187,7 +202,8 @@
       <div class="ccc-phase ccc-check">
         <div class="ccc-label">Check</div>
         <div class="ccc-content">
-          <p>Write one sentence for a substitute folder titled: <em>"If a student gets upset during this period, the first thing to say is…"</em> Don't write the whole crisis plan. Just the first sentence. The one that signals to the kid that the sub is not going to make things worse.</p>
+          <p data-audience="teacher">Write one sentence for a substitute folder titled: <em>"If a student gets upset during this period, the first thing to say is…"</em> Don't write the whole crisis plan. Just the first sentence. The one that signals to the kid that the sub is not going to make things worse.</p>
+          <p data-audience="parent">Write one sentence for a spouse, grandparent, or babysitter titled: <em>"If they get upset while I'm out, the first thing to say is…"</em> Don't write the whole crisis plan. Just the first sentence. The one that signals to the kid that this adult is not going to make things worse.</p>
         </div>
       </div>
     </div>
@@ -203,6 +219,10 @@
   <p>The hardest part of this module isn't learning the moves. It's letting yourself trust them when the situation feels urgent and your instincts are screaming to fix the problem. Acknowledging the feeling first feels passive in the moment. It is not passive. It is the only move that opens the door at all, and you can't pry open a door that's been locked by an earlier wrong move.</p>
 
   <p>Module III takes this further, into the situations where the door is already closed. When a student goes silent, when a son shuts down, when nothing you try seems to land. Faber's moves still apply there, but they need an extra layer of patience, and a different theory of what silence is actually saying.</p>
+
+  <div class="module-progress">
+    <button type="button" class="mark-done" data-module="module-2" aria-pressed="false">Mark Module II as done</button>
+  </div>
 
   <!-- NEXT UP -->
   <div class="next-up">
@@ -228,5 +248,6 @@
   <p style="margin-top:1rem; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">Set in Playfair Display &amp; Nunito</p>
 </footer>
 
+<script src="site.js"></script>
 </body>
 </html>

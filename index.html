@@ -8,6 +8,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://teens.mrbsocialstudies.org">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Talking with Teens">
+<meta property="og:title" content="Talking with Teens — a reader for teachers and parents of teens">
+<meta property="og:description" content="A curated mini-course pairing seven books with verified author interviews. Six modules in the Chunk-Chew-Check format, for teachers, parents, and anyone who would like to do this part better.">
+<meta property="og:url" content="https://teens.mrbsocialstudies.org">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Talking with Teens — a reader for teachers and parents of teens">
+<meta name="twitter:description" content="A curated mini-course pairing seven books with verified author interviews. Six modules in the Chunk-Chew-Check format, for teachers, parents, and anyone who would like to do this part better.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,6 +31,10 @@
       <a href="library.html">Library</a>
       <a href="#about">About</a>
     </nav>
+    <div class="role-toggle masthead-role" role="tablist" aria-label="Read as parent or teacher">
+      <button type="button" class="role-pill active" data-role="parent" role="tab" aria-selected="true">Parents</button>
+      <button type="button" class="role-pill" data-role="teacher" role="tab" aria-selected="false">Teachers</button>
+    </div>
   </div>
 </header>
 
@@ -31,14 +45,14 @@
   <div class="hero-meta">
     <span><strong>7</strong> Books</span>
     <span><strong>6</strong> Modules</span>
-    <span><strong>~13</strong> Hours</span>
+    <span><strong>~14</strong> Hours</span>
   </div>
 </section>
 
 <section class="intro">
   <p>Adolescence is the part of teaching nobody gives you a manual for. The training shows up for math instruction, for classroom management, for IEP paperwork. The actual experience of being in a room with twenty-five middle schoolers, half of whom are processing something they can't name, isn't on any syllabus. This is a reader for that part.</p>
 
-  <p>The structure is six modules. Each one pairs a short stack of readings with a verified author interview (podcast or video), walks you through the material using my district's Chunk-Chew-Check format, and asks for a small concrete artifact at the end. About two hours of work per module. Read them in order, or jump to the one your week needs.</p>
+  <p>The structure is six modules. Each one pairs a short stack of readings with a verified author interview (podcast or video), walks you through the material using my district's Chunk-Chew-Check format, and asks for a small concrete artifact at the end. About two to three hours of core work per module; optional listens add more if you want them. Use the Parents / Teachers toggle in the header to get the Check prompts that match your role. Read them in order, or jump to the one your week needs.</p>
 
   <p>Chunk-Chew-Check is the format my colleagues and I use with eighth graders, and it works on adult readers for the same reason it works on kids: it slows the input down enough that something actually gets metabolized. <strong>Chunk</strong> is the input (read this, watch this, listen to this). <strong>Chew</strong> is the processing move (what to look for, what to mark). <strong>Check</strong> is the artifact (a sentence to write, a script to draft, a paragraph for a substitute). The Check is the part that keeps this from being a podcast queue.</p>
 </section>
@@ -51,7 +65,7 @@
 <div class="path">
 
   <!-- Module I -->
-  <div class="stop">
+  <div class="stop" data-module="module-1">
     <div class="stop-marker">I</div>
     <div class="stop-card">
       <div class="kicker">Foundations</div>
@@ -59,15 +73,16 @@
       <p class="essential-q">Why does their behavior make sense, and why don't my instincts work?</p>
       <p>The single mental shift that makes every other module easier. Siegel's ESSENCE framework, plus Damour on the function of emotion.</p>
       <div class="stop-meta">
-        <span>~2 hrs</span>
+        <span>~2.25 hrs</span>
         <span>Siegel · Damour</span>
       </div>
       <a href="module-1.html">Open Module I</a>
+      <button type="button" class="mark-done" data-module="module-1" aria-pressed="false">Mark Module I as done</button>
     </div>
   </div>
 
   <!-- Module II -->
-  <div class="stop">
+  <div class="stop" data-module="module-2">
     <div class="stop-marker">II</div>
     <div class="stop-card">
       <div class="kicker">Communication Base</div>
@@ -75,15 +90,16 @@
       <p class="essential-q">What do I say in the first thirty seconds of a hard conversation?</p>
       <p>Faber and Mazlish's acknowledgment moves, grounded in Damour's case for why intensity is information rather than a problem to manage away.</p>
       <div class="stop-meta">
-        <span>~2.5 hrs</span>
+        <span>~2 hrs</span>
         <span>Faber &amp; Mazlish · Damour</span>
       </div>
       <a href="module-2.html">Open Module II</a>
+      <button type="button" class="mark-done" data-module="module-2" aria-pressed="false">Mark Module II as done</button>
     </div>
   </div>
 
   <!-- Module III -->
-  <div class="stop">
+  <div class="stop" data-module="module-3">
     <div class="stop-marker">III</div>
     <div class="stop-card">
       <div class="kicker">When the Door Closes</div>
@@ -91,15 +107,16 @@
       <p class="essential-q">How do I stay close to a kid who has gone quiet?</p>
       <p>Natterson on the cultural pull toward silence in boys, and Damour on the clinical line between shutdown that's working and shutdown that isn't.</p>
       <div class="stop-meta">
-        <span>~3 hrs</span>
+        <span>~2.25 hrs</span>
         <span>Natterson · Damour</span>
       </div>
       <a href="module-3.html">Open Module III</a>
+      <button type="button" class="mark-done" data-module="module-3" aria-pressed="false">Mark Module III as done</button>
     </div>
   </div>
 
   <!-- Module IV -->
-  <div class="stop">
+  <div class="stop" data-module="module-4">
     <div class="stop-marker">IV</div>
     <div class="stop-card">
       <div class="kicker">The Social World</div>
@@ -107,15 +124,16 @@
       <p class="essential-q">How do I matter to a kid whose world is their friends?</p>
       <p>Fagell's friendship skills for middle schoolers, plus Neufeld and Maté on what happens when peers, rather than adults, become the primary attachment.</p>
       <div class="stop-meta">
-        <span>~3.25 hrs</span>
+        <span>~2.5 hrs</span>
         <span>Neufeld &amp; Maté · Fagell</span>
       </div>
       <a href="module-4.html">Open Module IV</a>
+      <button type="button" class="mark-done" data-module="module-4" aria-pressed="false">Mark Module IV as done</button>
     </div>
   </div>
 
   <!-- Module V -->
-  <div class="stop">
+  <div class="stop" data-module="module-5">
     <div class="stop-marker">V</div>
     <div class="stop-card">
       <div class="kicker">Friction</div>
@@ -123,15 +141,16 @@
       <p class="essential-q">How do I hold a line without breaking the relationship?</p>
       <p>Faber and Mazlish on alternatives to punishment and working it out together, with Siegel on why the developmental brain doesn't learn from punitive consequences the way the punishment model assumes.</p>
       <div class="stop-meta">
-        <span>~3.25 hrs</span>
+        <span>~2.5 hrs</span>
         <span>Faber &amp; Mazlish · Siegel · Damour</span>
       </div>
       <a href="module-5.html">Open Module V</a>
+      <button type="button" class="mark-done" data-module="module-5" aria-pressed="false">Mark Module V as done</button>
     </div>
   </div>
 
   <!-- Module VI -->
-  <div class="stop">
+  <div class="stop" data-module="module-6">
     <div class="stop-marker">VI</div>
     <div class="stop-card">
       <div class="kicker">Practice</div>
@@ -143,6 +162,7 @@
         <span>Cushman &amp; Rogers · Fagell</span>
       </div>
       <a href="module-6.html">Open Module VI</a>
+      <button type="button" class="mark-done" data-module="module-6" aria-pressed="false">Mark Module VI as done</button>
     </div>
   </div>
 
@@ -171,5 +191,6 @@
   <p style="margin-top:1rem; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">Set in Playfair Display &amp; Nunito</p>
 </footer>
 
+<script src="site.js"></script>
 </body>
 </html>

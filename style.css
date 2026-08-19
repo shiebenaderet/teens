@@ -67,8 +67,9 @@ a:hover { color: var(--maroon-deep); border-bottom-color: var(--gold); }
   padding: 0 1.5rem;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
 }
 
 .brand {
@@ -280,6 +281,44 @@ a:hover { color: var(--maroon-deep); border-bottom-color: var(--gold); }
 }
 .stop-card a::after { content: ' →'; transition: transform 0.2s; display: inline-block; }
 .stop-card a:hover::after { transform: translateX(4px); }
+
+.stop.done .stop-marker {
+  background: var(--maroon);
+  border-color: var(--maroon-deep);
+  color: var(--gold-soft);
+}
+.stop.done .stop-card { border-color: var(--gold); }
+
+.mark-done {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.45rem 0.75rem;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.18s;
+}
+.mark-done:hover { border-color: var(--gold); color: var(--maroon); }
+.mark-done.is-done {
+  background: var(--maroon);
+  border-color: var(--maroon-deep);
+  color: var(--cream);
+}
+.stop-card .mark-done { display: block; margin-top: 0.85rem; }
+.stop:nth-child(odd) .stop-card .mark-done { margin-left: auto; }
+@media (max-width: 720px) {
+  .stop:nth-child(odd) .stop-card .mark-done { margin-left: 0; }
+}
+.module-progress {
+  max-width: 720px;
+  margin: 2rem auto 0;
+  text-align: center;
+}
 
 .stop:nth-child(odd) .stop-card { grid-column: 1; text-align: right; }
 .stop:nth-child(odd) .stop-card .kicker { text-align: right; }
@@ -1017,6 +1056,16 @@ footer .colophon {
   padding: 0 1.5rem;
   max-width: 720px;
 }
+.masthead-role {
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  gap: 0.35rem;
+}
+.masthead-role .role-pill {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.72rem;
+}
 .role-pill {
   font-family: 'Nunito', sans-serif;
   font-size: 0.85rem;
@@ -1044,12 +1093,8 @@ footer .colophon {
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-.scenario { display: none; }
-body[data-role="parent"] .scenario.for-parent { display: block; }
-body[data-role="teacher"] .scenario.for-teacher { display: block; }
-body[data-role="parent"] .scenario.for-both,
-body[data-role="teacher"] .scenario.for-both { display: block; }
 .scenario {
+  display: block;
   background: var(--paper);
   border: 1px solid var(--rule);
   border-left: 4px solid var(--gold);
@@ -1058,6 +1103,12 @@ body[data-role="teacher"] .scenario.for-both { display: block; }
   border-radius: 2px;
   box-shadow: 0 2px 12px var(--shadow);
 }
+body[data-role="parent"] .scenario.for-teacher { display: none; }
+body[data-role="teacher"] .scenario.for-parent { display: none; }
+[data-audience="parent"],
+[data-audience="teacher"] { display: revert; }
+body[data-role="parent"] [data-audience="teacher"] { display: none; }
+body[data-role="teacher"] [data-audience="parent"] { display: none; }
 .scenario-trigger {
   font-family: 'Playfair Display', serif;
   font-style: italic;
@@ -1067,8 +1118,9 @@ body[data-role="teacher"] .scenario.for-both { display: block; }
   line-height: 1.35;
 }
 .scenario-trigger::before {
-  content: '\2003';
+  content: '\201C';
   color: var(--gold);
+  margin-right: 0.15em;
 }
 .scenario-move {
   font-family: 'Playfair Display', serif;
@@ -1205,8 +1257,9 @@ body[data-role="teacher"] .scenario.for-both { display: block; }
 
 /* Print-friendly fallbacks */
 @media print {
-  .masthead, .next-up { display: none; }
+  .masthead, .next-up, .role-toggle, .mark-done, .module-progress { display: none; }
   body { background: white; }
   .glossary-tooltip { display: none; }
   .glossary-term { border-bottom: none; color: var(--ink); }
+  [data-audience] { display: block !important; }
 }

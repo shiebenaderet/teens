@@ -8,6 +8,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://teens.mrbsocialstudies.org/module-1.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Talking with Teens">
+<meta property="og:title" content="Module I: The Adolescent Brain — Talking with Teens">
+<meta property="og:description" content="Module I of the Talking with Teens reader. Built on the Chunk-Chew-Check model.">
+<meta property="og:url" content="https://teens.mrbsocialstudies.org/module-1.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Module I: The Adolescent Brain — Talking with Teens">
+<meta name="twitter:description" content="Module I of the Talking with Teens reader. Built on the Chunk-Chew-Check model.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,6 +31,10 @@
       <a href="library.html">Library</a>
       <a href="index.html#about">About</a>
     </nav>
+    <div class="role-toggle masthead-role" role="tablist" aria-label="Read as parent or teacher">
+      <button type="button" class="role-pill active" data-role="parent" role="tab" aria-selected="true">Parents</button>
+      <button type="button" class="role-pill" data-role="teacher" role="tab" aria-selected="false">Teachers</button>
+    </div>
   </div>
 </header>
 
@@ -39,7 +53,7 @@
   <span>Reading <strong>~75 min</strong></span>
   <span>Listening <strong>~35 min</strong></span>
   <span>Check tasks <strong>~20 min</strong></span>
-  <span>Total <strong>~2 hours</strong></span>
+  <span>Total <strong>~2.25 hours</strong></span>
 </div>
 
 <section class="module-body">
@@ -84,7 +98,8 @@
       <div class="ccc-phase ccc-check">
         <div class="ccc-label">Check</div>
         <div class="ccc-content">
-          <p>Write a single sentence you could say to a colleague who calls a student "irresponsible" — a sentence grounded in what Jensen says about the developing brain. Don't make it preachy; make it useful.</p>
+          <p data-audience="teacher">Write a single sentence you could say to a colleague who calls a student "irresponsible" — a sentence grounded in what Jensen says about the developing brain. Don't make it preachy; make it useful.</p>
+          <p data-audience="parent">Write a single sentence you could say to a relative or co-parent who calls your kid "irresponsible" — a sentence grounded in what Jensen says about the developing brain. Don't make it preachy; make it useful.</p>
         </div>
       </div>
 
@@ -115,7 +130,8 @@
       <div class="ccc-phase ccc-chew">
         <div class="ccc-label">Chew</div>
         <div class="ccc-content">
-          <p>For each of the four ESSENCE traits, jot down one student behavior you've recently been frustrated by that fits that trait. Be specific — a name, a moment, a class period. Then pay close attention to Siegel's reframing of risk-taking as <em>hyperrational</em> rather than irrational: the adolescent brain assigns a higher weight to reward, not a lower weight to consequence.</p>
+          <p data-audience="teacher">For each of the four ESSENCE traits, jot down one student behavior you've recently been frustrated by that fits that trait. Be specific — a name, a moment, a class period. Then pay close attention to Siegel's reframing of risk-taking as <em>hyperrational</em> rather than irrational: the adolescent brain assigns a higher weight to reward, not a lower weight to consequence.</p>
+          <p data-audience="parent">For each of the four ESSENCE traits, jot down one behavior from your own kid that has frustrated you lately. Be specific — a name, a moment, a weeknight. Then pay close attention to Siegel's reframing of risk-taking as <em>hyperrational</em> rather than irrational: the adolescent brain assigns a higher weight to reward, not a lower weight to consequence.</p>
         </div>
       </div>
 
@@ -156,7 +172,8 @@
       <div class="ccc-phase ccc-check">
         <div class="ccc-label">Check</div>
         <div class="ccc-content">
-          <p>Write a one-paragraph guide for a substitute teacher titled: <em>"When a kid seems upset in my classroom, ask yourself these three questions first."</em> Use Damour's framing — make the questions ones that distinguish ordinary distress from something more serious.</p>
+          <p data-audience="teacher">Write a one-paragraph guide for a substitute teacher titled: <em>"When a kid seems upset in my classroom, ask yourself these three questions first."</em> Use Damour's framing — make the questions ones that distinguish ordinary distress from something more serious.</p>
+          <p data-audience="parent">Write a one-paragraph guide for yourself (or a co-parent) titled: <em>"When they seem upset after school, ask yourself these three questions first."</em> Use Damour's framing — make the questions ones that distinguish ordinary distress from something more serious.</p>
         </div>
       </div>
 
@@ -187,7 +204,8 @@
       <div class="ccc-phase ccc-check">
         <div class="ccc-label">Check</div>
         <div class="ccc-content">
-          <p>Write one sentence you could say at a parent conference that uses Siegel's reframing — not as an excuse for behavior, but as context. The sentence should leave the parent feeling like their child is normal, not like their child is off the hook.</p>
+          <p data-audience="teacher">Write one sentence you could say at a parent conference that uses Siegel's reframing — not as an excuse for behavior, but as context. The sentence should leave the parent feeling like their child is normal, not like their child is off the hook.</p>
+          <p data-audience="parent">Write one sentence you could say to a teacher, coach, or co-parent that uses Siegel's reframing — not as an excuse for behavior, but as context. The sentence should leave them feeling like your child is normal, not like your child is off the hook.</p>
         </div>
       </div>
     </div>
@@ -200,9 +218,14 @@
     <p>Pick one student or one of your kids whose behavior has been frustrating you lately. Describe that behavior using ESSENCE language — which of the four traits is it expressing? What is the developmental work it's doing? What would change in your response if you treated it as a feature rather than a defect?</p>
   </div>
 
-  <p>The shift this module is asking for is not soft. It is not "go easier on them." It is more like a calibration: the same energy you would bring to a misbehaving adult, redirected. You can still hold a line; you can still ask for the work; you can still call the parent. But you do it without the underlying narrative that something is wrong with this person. That narrative is what kids hear, even when you don't say it.</p>
+  <p data-audience="teacher">The shift this module is asking for is not soft. It is not "go easier on them." It is more like a calibration: the same energy you would bring to a misbehaving adult, redirected. You can still hold a line; you can still ask for the work; you can still call the parent. But you do it without the underlying narrative that something is wrong with this person. That narrative is what kids hear, even when you don't say it.</p>
+  <p data-audience="parent">The shift this module is asking for is not soft. It is not "go easier on them." It is more like a calibration: the same energy you would bring to a misbehaving adult, redirected. You can still hold a line; you can still ask for the work; you can still follow through. But you do it without the underlying narrative that something is wrong with this person. That narrative is what kids hear, even when you don't say it.</p>
 
   <p>That groundwork done, Module II takes the next step — what to actually <em>say</em>. Specifically, what to say in the first thirty seconds of a tough conversation, before any technique can land.</p>
+
+  <div class="module-progress">
+    <button type="button" class="mark-done" data-module="module-1" aria-pressed="false">Mark Module I as done</button>
+  </div>
 
   <!-- NEXT UP -->
   <div class="next-up">
@@ -214,7 +237,7 @@
       <div class="direction">Reference</div>
       <div class="title">The Library</div>
     </a>
-    <a href="#">
+    <a href="module-2.html">
       <div class="direction">Continue →</div>
       <div class="title">Module II</div>
     </a>
@@ -228,5 +251,6 @@
   <p style="margin-top:1rem; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">Set in Playfair Display &amp; Nunito</p>
 </footer>
 
+<script src="site.js"></script>
 </body>
 </html>

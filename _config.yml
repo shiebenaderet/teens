@@ -1,0 +1,7 @@
+# GitHub Pages (Jekyll): publish only the public reader.
+# Keep build tools and the excerpted portable file off the live site.
+exclude:
+  - portable/
+  - scripts/
+  - README.md
+  - .gitignore
