@@ -1,7 +1,6 @@
-# GitHub Pages (Jekyll): publish only the public reader.
-# Keep build tools and the excerpted portable file off the live site.
+# GitHub Pages (Jekyll): do not publish local build tools.
+# private/reader.html is the encrypted department copy and should be published.
 exclude:
-  - portable/
   - scripts/
   - README.md
   - .gitignore

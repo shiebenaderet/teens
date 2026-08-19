@@ -2,9 +2,12 @@
 books/
 excerpts/
 
-# Portable builds embed copyrighted chapter excerpts. Generate locally;
-# do not commit or deploy them.
+# Portable plaintext builds embed chapter excerpts. Generate locally.
+# Only the encrypted department copy (private/reader.html) is committed.
 portable/
+
+# StatiCrypt local config (may include a salt; never put the password here)
+.staticrypt.json
 
 # Downloaded podcast audio and video files — personal use only, never publish
 media/

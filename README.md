@@ -15,10 +15,12 @@ The public site is the HTML and CSS at the repo root, plus `site.js` and `favico
 ├── library.html              Seven books + verified author interviews
 ├── module-1.html … module-6.html
 ├── style.css
+├── robots.txt                Disallow /private/ for crawlers
 ├── site.js                   Role toggle, progress, HTTPS upgrade
 ├── favicon.svg
 ├── CNAME                     teens.mrbsocialstudies.org
-├── _config.yml               Keeps portable/ and scripts/ off Pages
+├── _config.yml               Keeps scripts/ off Pages
+├── private/reader.html       Encrypted department copy (password prompt)
 │
 ├── books/                    Raw EPUB/PDF sources. Local only, don't deploy.
 ├── excerpts/                 Extracted chapters as markdown, per module.
@@ -47,9 +49,27 @@ The public site is the HTML and CSS at the repo root, plus `site.js` and `favico
 
 Core path is about **14 hours**. Optional listens add more.
 
-## Building the portable file
+## Department copy (password-protected)
 
-There is a single-file edition that bundles the site, the brand styling, and the chapter excerpts into one HTML file. Double-click it, the browser opens it, no install needed. It is for sharing with a colleague directly — not for the public site, because it embeds copyrighted chapter text.
+The public site is a link-out reader: modules, library, and scenarios, no chapter text.
+
+The excerpted single-file edition lives at [`/private/reader.html`](https://teens.mrbsocialstudies.org/private/reader.html). It is AES-encrypted in the browser (StatiCrypt). Without the password you only get a prompt and ciphertext. Ask Mr. B for the passphrase; don't put it in this repo, the README, or a public PR.
+
+To rebuild and re-encrypt after editing modules or excerpts:
+
+```bash
+pip3 install markdown
+python3 scripts/build-portable.py
+TWT_PASSWORD='your-passphrase' ./scripts/encrypt-portable.sh
+```
+
+That updates `private/reader.html` (safe to commit) from `portable/talking-with-teens-shareable.html` (gitignored plaintext).
+
+This is access control for a tiny department group, not a courtroom-grade DRM. Don't post the unlocked page, and don't put the password on the public site.
+
+## Building the portable file (local plaintext)
+
+There is a single-file edition that bundles the site, the brand styling, and the chapter excerpts into one HTML file. Double-click it, the browser opens it, no install needed. Keep that plaintext copy on your machine. The public site only serves the encrypted version above.
 
 To regenerate it after adding a module or excerpts:
 
